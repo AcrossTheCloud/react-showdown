@@ -130,7 +130,7 @@ export default function MarkdownView(props: MarkdownViewProps): ReactElement {
   }
 
   if (dangerouslySetInnerHTML) {
-    return <div dangerouslySetInnerHTML={{ __html: html }} />;
+    return <span dangerouslySetInnerHTML={{ __html: html }} />;
   }
 
   const root = htmlparser.parseDOM(html, {
@@ -144,7 +144,7 @@ export default function MarkdownView(props: MarkdownViewProps): ReactElement {
     recognizeSelfClosing: true,
   });
 
-  return createElement('div', otherProps, root.map(mapElement));
+  return createElement('span', otherProps, root.map(mapElement));
 }
 
 // Match react-dom omittedCloseTags. See also:
