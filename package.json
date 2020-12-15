@@ -1,5 +1,5 @@
 {
-  "name": "react-showdown",
+  "name": "@acrossthecloud/react-showdown",
   "version": "2.1.0",
   "description": "Render React components within markdown and markdown as React components!",
   "license": "MIT",
